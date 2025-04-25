@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Sarthak Rajvaidya</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #5a189a;
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+      gap: 30px;
+    }
+
+    .project-card {
+      background-color: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #7b2cbf;
+    }
+
+    .project-desc {
+      margin-top: 10px;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 14px;
+      color: #5f0f40;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .project-link:hover {
+      color: #9d4edd;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .projects {
+        grid-template-columns: 1fr; /* One card per row on small screens */
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      .project-title {
+        font-size: 18px;
+      }
+
+      .project-desc {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sarthak Rajvaidya</h1>
+    <p>Creative Developer | My Project Showcase</p>
+  </header>
+
+  <div class="container">
+    <h2>Featured Projects</h2>
+    <div class="projects">
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="image1.png" alt="Portfolio Website">
+        </div>
+        <div class="project-content">
+          <div class="project-title">Portfolio Website</div>
+          <div class="project-desc">A responsive portfolio showcasing my resume, skills, and contact form. Built using HTML, CSS, and vanilla JS.</div>
+          <a class="project-link" href="#">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="image2.jpeg" alt="Weather App">
+        </div>
+        <div class="project-content">
+          <div class="project-title">Weather App</div>
+          <div class="project-desc">Displays real-time weather using OpenWeatherMap API. Styled with Bootstrap and interactive search input.</div>
+          <a class="project-link" href="#">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="image3.jpg" alt="E-commerce Page">
+        </div>
+        <div class="project-content">
+          <div class="project-title">E-commerce Landing Page</div>
+          <div class="project-desc">Clean and stylish product showcase page with promotional sections and CTA buttons using HTML/CSS.</div>
+          <a class="project-link" href="#">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="image4.jpeg" alt="To-Do List App">
+        </div>
+        <div class="project-content">
+          <div class="project-title">To-Do List App</div>
+          <div class="project-desc">Simple JavaScript app with local storage, allowing task creation, completion tracking, and deletion.</div>
+          <a class="project-link" href="#">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Achievements | Sarthak Rajvaidya</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      color: #fff;
+      perspective: 1000px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 3em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.3em;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ffd700;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .achievements {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .card-container {
+      perspective: 1200px;
+    }
+
+    .achievement-card {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease;
+      transform: rotateY(0);
+    }
+
+    .card-container:hover .achievement-card {
+      transform: rotateY(180deg);
+    }
+
+    .achievement-title, .achievement-date, .achievement-desc {
+      backface-visibility: hidden;
+    }
+
+    .achievement-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ffd700;
+    }
+
+    .achievement-date {
+      font-size: 0.9em;
+      color: #ffcccb;
+      margin-top: 8px;
+    }
+
+    .achievement-desc {
+      margin-top: 15px;
+      font-size: 1em;
+      line-height: 1.6;
+      color: #f0f0f0;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.8em;
+      }
+
+      .achievements {
+        grid-template-columns: 1fr; /* One card per row on smaller screens */
+      }
+
+      .card-container {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sarthak Rajvaidya</h1>
+    <p>My Achievements</p>
+  </header>
+
+  <div class="container">
+    <h2>Achievements & Recognitions</h2>
+    <div class="achievements">
+
+      <!-- Achievement 1 -->
+      <div class="card-container">
+        <div class="achievement-card">
+          <div class="achievement-title">Best Student of the Year</div>
+          <div class="achievement-date">2024</div>
+          <div class="achievement-desc">Awarded for academic excellence and overall performance in the final year of graduation.</div>
+        </div>
+      </div>
+
+      <!-- Achievement 2 -->
+      <div class="card-container">
+        <div class="achievement-card">
+          <div class="achievement-title">Hackathon Winner</div>
+          <div class="achievement-date">2024</div>
+          <div class="achievement-desc">Secured 1st position in an inter-college hackathon for creating a real-time pollution tracking app.</div>
+        </div>
+      </div>
+
+      <!-- Achievement 3 -->
+      <div class="card-container">
+        <div class="achievement-card">
+          <div class="achievement-title">Google Cloud Certification</div>
+          <div class="achievement-date">2024</div>
+          <div class="achievement-desc">Completed Google Cloud Foundations and Data Engineering training with certification.</div>
+        </div>
+      </div>
+
+      <!-- Achievement 4 -->
+      <div class="card-container">
+        <div class="achievement-card">
+          <div class="achievement-title">Internship at Infosys</div>
+          <div class="achievement-date">2024</div>
+          <div class="achievement-desc">Completed a 2-month internship in web development and contributed to internal tools.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

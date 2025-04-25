@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Sarthak Rajvaidya</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+      color: #333;
+      perspective: 1500px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform-style: preserve-3d;
+    }
+
+    .container.tilted {
+      transform: rotateY(var(--rotateY)) rotateX(var(--rotateX));
+    }
+
+    h1, h2 {
+      color: #6200ea;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      border-bottom: 4px solid #6200ea;
+      padding-bottom: 10px;
+    }
+
+    .details {
+      background: #f3e5f5;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .details p {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #311b92;
+    }
+
+    .skills, .projects {
+      margin-top: 40px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .skill-item {
+      width: 100px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .skill-item:hover {
+      transform: scale(1.15) rotateY(10deg);
+    }
+
+    .skill-item img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      background: #f8bbd0;
+      padding: 5px;
+    }
+
+    .projects .project-card {
+      background: #ede7f6;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 12px;
+      width: 80%;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease, background 0.3s ease;
+      transform-style: preserve-3d;
+    }
+
+    .projects .project-card:hover {
+      background: #d1c4e9;
+      transform: scale(1.05) rotateY(5deg);
+    }
+
+    a {
+      color: #1976d2;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="tiltBox">
+    <h1>About Me</h1>
+    <p>
+      My name is <strong>Sarthak Rajvaidya</strong>, and I am a first-year Computer Engineering student. Passionate about technology, I love working on projects and learning through hands-on experience. My goal is to maximize my potential and contribute positively to the field of Computer Engineering.
+    </p>
+
+    <div class="details">
+      <p><span class="highlight">Birthday:</span> 14 April 2006</p>
+      <p><span class="highlight">Age:</span> 19</p>
+      <p><span class="highlight">Website:</span> <a href="#">www.sarthak-portfolio.com</a></p>
+      <p><span class="highlight">Degree:</span> B.Tech (Pursuing)</p>
+      <p><span class="highlight">Phone:</span> +91 7498456510</p>
+      <p><span class="highlight">Email:</span> sarthak.rajvaidya@mitaoe.ac.in</p>
+      <p><span class="highlight">City:</span> Pune, India</p>
+    </div>
+
+    <div class="skills">
+      <h2>Skills</h2>
+      <div class="skill-list">
+        <div class="skill-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="HTML">
+          <p>HTML</p>
+        </div>
+        <div class="skill-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="CSS">
+          <p>CSS</p>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+          <p>Python</p>
+        </div>
+        <div class="skill-item">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="C">
+          <p>C</p>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/KiCad-Logo.svg" alt="KiCad">
+          <p>KiCad</p>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg" alt="Arduino">
+          <p>Arduino</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Automatic Power Cutoff Circuit</h3>
+        <p>Designed a Banking app using circuit logic to ensure safe power operations.</p>
+      </div>
+      <div class="project-card">
+        <h3>PCB Design & Fabrication</h3>
+        <p>Worked on designing a game and launched it on social platforms after PCB prototyping.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for tilt effect -->
+  <script>
+    const tiltBox = document.getElementById("tiltBox");
+
+    document.addEventListener("mousemove", (e) => {
+      const { innerWidth: w, innerHeight: h } = window;
+      const x = (e.clientX / w - 0.5) * 2;
+      const y = (e.clientY / h - 0.5) * 2;
+
+      tiltBox.style.setProperty('--rotateY', `${x * 8}deg`);
+      tiltBox.style.setProperty('--rotateX', `${-y * 8}deg`);
+      tiltBox.classList.add("tilted");
+    });
+
+    document.addEventListener("mouseleave", () => {
+      tiltBox.style.setProperty('--rotateY', `0deg`);
+      tiltBox.style.setProperty('--rotateX', `0deg`);
+      tiltBox.classList.remove("tilted");
+    });
+  </script>
+</body>
+</html>
